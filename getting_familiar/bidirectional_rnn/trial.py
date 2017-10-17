@@ -1,10 +1,4 @@
-import tensorflow as tf
-import numpy as np
-import re
-import string
-from nltk import word_tokenize
-import nltk
-import spacy
+
 """""
 
 cell=tf.nn.rnn_cell.LSTMCell(num_units=64,state_is_tuple=False)
@@ -119,5 +113,7 @@ print(next(0,2))
 #print(next(22,33))
         
 """""
-tokenizer=tf.contrib.keras.preprocessing.text.Tokenizer(num_words=100,)
-
+a=[1,2,3,4]
+for i in range(8-len(a)):
+    a.append(0)
+print(a)

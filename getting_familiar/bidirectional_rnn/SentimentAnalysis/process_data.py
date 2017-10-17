@@ -3,6 +3,10 @@ import re
 import numpy as np
 import pickle
 
+
+
+
+
 def generate_vec_and_labels():
     #read tweets
     tweets,labels=read_tweets()
@@ -14,15 +18,37 @@ def generate_vec_and_labels():
     index_to_word_dict=index_to_word(word_to_index_dict)
     #list of vector and labels(a list of lists)
     vec_and_labels=create_vec_and_labels(tweets,word_to_index_dict,marked_labels)
+    #print(index_to_word_dict)
+    vec_and_labels,seq_lengths=length_and_zero_pad(vec_and_labels,45)
+
+    train_vec_and_labels=vec_and_labels[0:10000]
+    train_seq_length=seq_lengths[0:10000]
+
+    dev_vec_and_labels=vec_and_labels[10000:12000]
+    dev_seq_length=seq_lengths[10000:12000]
+
+    test_vec_and_labels=vec_and_labels[12000:]
+    test_seq_length=seq_lengths[12000:]
+
+    save_pickle("data/train.p",train_vec_and_labels,train_seq_length)
+    save_pickle("data/test.p",test_vec_and_labels,test_seq_length)
+    save_pickle("data/dev.p",dev_vec_and_labels,dev_seq_length)
+
+
+
+
+
+
 
     with open("data/dataset.p",'wb') as file:
-        pickle.dump(vec_and_labels,file)
+        pickle.dump([vec_and_labels,seq_lengths],file)
 
     """""
-    with open("dataset.p",'rb') as file:
-        retrieved=pickle.load(file)
-    print("retrieved")
+    with open("data/dataset.p",'rb') as file:
+        vec_retrieved,seq_retrieved=pickle.load(file)
     """""
+
+
 
 
 
@@ -51,7 +77,7 @@ def word_to_index(tweets):
     #empty dict
     word_to_index_dict={}
     #index
-    index=0
+    index=1
     #looping over every tweet
     for tweet in tweets:
         #splitting into words
@@ -87,10 +113,12 @@ def create_vec_and_labels(tweets,word_to_index_dict,labels):
         vec = []
         #splitiing tweet to words
         words=split_into_words(tweet)
+        print(words)
         #for every word in splitted tweet
         for word in words:
+            if word is not "":
             #appending index of each word in tweet to vec
-            vec.append(word_to_index_dict[word])
+                vec.append(word_to_index_dict[word])
         #appending scentence vector to individual_vec_and_labels
         individual_vec_and_labels.append(vec)
         #appending label
@@ -138,6 +166,7 @@ def verify_one_hot(one_hot,index_to_word_dict):
 
     #print(np.zeros(12))
     for sentence,label in one_hot:
+
         recons=[]
         for word in sentence:
             index=np.argmax(word)
@@ -145,5 +174,18 @@ def verify_one_hot(one_hot,index_to_word_dict):
         print(" ".join(recons))
 
 
+def length_and_zero_pad(vec_and_labels,max_length):
+    seq_lengths=[]
+    for vec_and_label in vec_and_labels:
+        seq_length=len(vec_and_label[0])
+        seq_lengths.append(seq_length)
+        for i in range(max_length-seq_length):
+            vec_and_label[0].append(0)
+    return vec_and_labels,seq_lengths
 
+def save_pickle(filename,vec_and_labels,seq_lengths):
+    with open(filename,'wb') as file:
+        pickle.dump([vec_and_labels,seq_lengths],file)
 generate_vec_and_labels()
+
+
