@@ -14,26 +14,36 @@ batch_size=32
 
 
 #placeholders
+#[batch_size,max_length]
 tweet_vec=tf.placeholder(tf.int64,[None,max_length])
+#[batch_size,num_classes] (in form of one hot)
 tweet_label=tf.placeholder(tf.int64,[None,num_classes])
+#[batch_size]
 seq_length=tf.placeholder(tf.int32,[None])
 
 #fully connected layer or hidden layer
+#[num_units,num_classes]
 out_weight=tf.Variable(tf.random_normal([num_units,num_classes]))
+#[num_classes]
 out_bais=tf.Variable(tf.random_normal([num_classes]))
 
+#[vocab_size,embedding_size]
 embedding=tf.get_variable(name="embedding",shape=[vocab_size,embedding_size])
 
+#[batch_size,max_length,embedding_size]
 input=tf.nn.embedding_lookup(embedding,tweet_vec)
 
 
 cell_fw=rnn.BasicLSTMCell(num_units=num_units)
 cell_bw=rnn.BasicLSTMCell(num_units=num_units)
 
+
 outputs,states=tf.nn.bidirectional_dynamic_rnn(cell_fw=cell_fw,cell_bw=cell_bw,inputs=input,sequence_length=seq_length,dtype="float32")
 
+#net_output=tf.concat(outputs,2)
+#[batch_size,max_length,num_units]
 output_fw,output_bw=outputs
-
+#[batch_size,max_length,num_units]
 net_output=output_fw+output_bw
 
 #to figure out the last relevent output
@@ -42,6 +52,8 @@ max_length = tf.shape(net_output)[1]
 out_size = int(net_output.get_shape()[2])
 index = tf.range(0, size_of_batch) * max_length + (seq_length - 1)
 flat = tf.reshape(net_output, [-1, out_size])
+
+#[batch_size,num_units]
 relevant_output = tf.gather(flat, index)
 
 
@@ -65,12 +77,13 @@ with tf.Session() as sess:
     sess.run(init)
     batch_number=0
     iter=1
-    while iter<1000:
+    while iter<500:
         x,y,seq,batch_number=next_batch(batch_number,batch_size,"train")
         y=label_to_one_hot(y)
 
 
         sess.run(opt, feed_dict={tweet_vec: x, tweet_label: y,seq_length:seq})
+        #print(sess.run(tf.shape(sess.run(trial_output, feed_dict={tweet_vec: x, tweet_label: y,seq_length:seq}))))
 
         if iter %10==0:
             acc=sess.run(accuracy,feed_dict={tweet_vec: x, tweet_label: y,seq_length:seq})
