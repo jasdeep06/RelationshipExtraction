@@ -64,3 +64,16 @@ def label_relations():
         labels.append(relation_key[relation])
     pickle_contents(labels,"dataset/train_labels.p")
 
+
+def pad_vector():
+    max_length=112
+    vecs=retrieve_contents("dataset/train_vectors.p")
+    seq_length=retrieve_contents("dataset/seq_length.p")
+    index=0
+    for vec in vecs:
+        for i in range(max_length - seq_length[index]):
+            vec.append(0)
+        index=index+1
+    pickle_contents(vecs,"dataset/padded_train_vectors.p")
+    return vecs
+pad_vector()

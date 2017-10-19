@@ -69,9 +69,9 @@ def determine_length():
 def next_batch(batch_number,batch_size):
 
     NUMBER_OF_SENTENCES=8000
-    vectors = retrieve_contents("dataset/train_vectors.p")
+    vectors = retrieve_contents("dataset/padded_train_vectors.p")
     seq_lengths=retrieve_contents("dataset/seq_length.p")
-    labels=retrieve_contents("dataset/train_labels.p")
+    labels=retrieve_contents("dataset/one_hot_labels.p")
 
 
     if NUMBER_OF_SENTENCES-(batch_number*batch_size) <batch_size:
@@ -85,7 +85,17 @@ def next_batch(batch_number,batch_size):
     batch_number=batch_number+1
     return sentence_batch,label_batch,seq_lengths_batch,batch_number
 
-determine_length()
+def one_hot_labels():
+    labels=retrieve_contents("dataset/train_labels.p")
+
+    result = []
+    for label in labels:
+        one_hot = np.zeros(19)
+        one_hot[label - 1] = 1
+        result.append(one_hot)
+    pickle_contents(result,"dataset/one_hot_labels.p")
+    return result
+print(one_hot_labels()[0])
 
 
 
