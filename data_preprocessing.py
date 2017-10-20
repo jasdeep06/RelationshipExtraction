@@ -66,12 +66,18 @@ def determine_length():
     print(length)
     pickle_contents(length, "dataset/seq_length.p")
 
-def next_batch(batch_number,batch_size):
+def next_batch(batch_number,batch_size,task):
+    if task=="train":
+        NUMBER_OF_SENTENCES=7000
+        vectors = retrieve_contents("dataset/padded_train_vectors.p")
+        seq_lengths=retrieve_contents("dataset/train_seq_length.p")
+        labels=retrieve_contents("dataset/one_hot_labels.p")
+    if task=="dev":
+        NUMBER_OF_SENTENCES=1000
 
-    NUMBER_OF_SENTENCES=8000
-    vectors = retrieve_contents("dataset/padded_train_vectors.p")
-    seq_lengths=retrieve_contents("dataset/seq_length.p")
-    labels=retrieve_contents("dataset/one_hot_labels.p")
+        vectors = retrieve_contents("dataset/dev_vectors.p")
+        labels = retrieve_contents("dataset/dev_labels.p")
+        seq_lengths = retrieve_contents("dataset/dev_sequence_length.p")
 
 
     if NUMBER_OF_SENTENCES-(batch_number*batch_size) <batch_size:
@@ -95,9 +101,41 @@ def one_hot_labels():
         result.append(one_hot)
     pickle_contents(result,"dataset/one_hot_labels.p")
     return result
-print(one_hot_labels()[0])
+
+
+def index_to_word(word_to_index_dict):
+    #interchange keys and values
+    index_to_word_dict={y:x for x,y in word_to_index_dict.items()}
+    return index_to_word_dict
 
 
 
+def create_dev_set():
+    train_vectors=retrieve_contents("dataset/padded_train_vectors.p")
+    train_labels=retrieve_contents("dataset/one_hot_labels.p")
+    seq_length=retrieve_contents("dataset/seq_length.p")
+    dev_seq_length=seq_length[7000:]
+    dev_vectors=train_vectors[7000:]
+    dev_labels=train_labels[7000:]
+    train_vectors=train_vectors[0:7000]
+    train_labels=train_labels[0:7000]
+    train_seq_length=seq_length[0:7000]
 
+    print(dev_vectors)
+    pickle_contents(train_vectors, "dataset/padded_train_vectors.p")
+    pickle_contents(train_labels, "dataset/one_hot_labels.p")
+    pickle_contents(dev_vectors,"dataset/dev_vectors.p")
+    pickle_contents(dev_labels,"dataset/dev_labels.p")
+    pickle_contents(dev_seq_length, "dataset/dev_sequence_length.p")
+    pickle_contents(train_seq_length, "dataset/train_seq_length.p")
+#create_dev_set()
 
+def dev_set():
+    dev_vectors=retrieve_contents("dataset/dev_vectors.p")
+    dev_labels=retrieve_contents("dataset/dev_labels.p")
+    dev_sequence_length=retrieve_contents("dataset/dev_sequence_length.p")
+    print(dev_vectors)
+
+    return dev_vectors,dev_labels,dev_sequence_length
+
+#one_hot_labels()

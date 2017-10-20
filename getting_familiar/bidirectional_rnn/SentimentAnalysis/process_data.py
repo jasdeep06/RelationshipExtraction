@@ -2,6 +2,8 @@ import pandas as pd
 import re
 import numpy as np
 import pickle
+from data_preprocessing import retrieve_contents
+
 
 
 
@@ -187,5 +189,7 @@ def save_pickle(filename,vec_and_labels,seq_lengths):
     with open(filename,'wb') as file:
         pickle.dump([vec_and_labels,seq_lengths],file)
 generate_vec_and_labels()
+
+
 
 

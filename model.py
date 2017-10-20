@@ -1,6 +1,6 @@
 import tensorflow as tf
 from tensorflow.contrib import rnn
-from data_preprocessing import next_batch
+from data_preprocessing import next_batch,dev_set
 import numpy as np
 
 num_units=128
@@ -64,36 +64,75 @@ loss=tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=logits,labels
 #optimization
 opt=tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(loss)
 
+
+#recall,recall_op=tf.metrics.recall(label_vector,logits)
+#f1=(2*(precision)*(recall))/(precision+recall)
 #model evaluation
-correct_prediction=tf.equal(tf.argmax(logits,1),tf.argmax(label_vector,1))
-accuracy=tf.reduce_mean(tf.cast(correct_prediction,tf.float32))
+
+prediction=tf.argmax(logits,1)
+labels=tf.argmax(label_vector,1)+1
+
+precision,precision_op=tf.metrics.precision(labels,prediction,name="precision_operation")
+recall,recall_op=tf.metrics.recall(labels,prediction,name="recall_operation")
+running_vars_precision = tf.get_collection(tf.GraphKeys.LOCAL_VARIABLES, scope="precision_operation")
+running_vars_recall = tf.get_collection(tf.GraphKeys.LOCAL_VARIABLES, scope="recall_operation")
+f1_score=(2*(precision)*recall)/(precision+recall)
+
+
+    # Define initializer to initialize/reset running variables
+running_vars_initializer_precision = tf.variables_initializer(var_list=running_vars_precision)
+running_vars_initializer_recall = tf.variables_initializer(var_list=running_vars_recall)
+
+#correct_prediction=tf.equal(tf.argmax(logits,1),tf.argmax(label_vector,1))
+#accuracy=tf.reduce_mean(tf.cast(correct_prediction,tf.float32))
 
 
 #training loop
 init=tf.global_variables_initializer()
 with tf.Session() as sess:
     sess.run(init)
+    #sess.run(tf.local_variables_initializer())
     batch_number=0
     iter=1
-    while iter<500:
-        x,y,seq,batch_number=next_batch(batch_number,batch_size)
+    while iter<100:
+        sess.run(running_vars_initializer_precision)
+        sess.run(running_vars_initializer_recall)
 
+
+        x,y,seq,batch_number=next_batch(batch_number,batch_size,"train")
+
+        print(sess.run(prediction, feed_dict={sentence_vectors: x, label_vector: y, seq_lengths: seq}))
+        print(sess.run(labels, feed_dict={sentence_vectors: x, label_vector: y, seq_lengths: seq}))
+
+        #print(sess.run(prediction,feed_dict={sentence_vectors: x, label_vector: y,seq_lengths:seq}))
+        #print(sess.run(labels,feed_dict={sentence_vectors: x, label_vector: y,seq_lengths:seq}))
 
 
         sess.run(opt, feed_dict={sentence_vectors: x, label_vector: y,seq_lengths:seq})
         #print(sess.run(tf.shape(sess.run(trial_output, feed_dict={tweet_vec: x, tweet_label: y,seq_length:seq}))))
+        sess.run(precision_op,feed_dict={sentence_vectors: x, label_vector: y,seq_lengths:seq})
+        sess.run(recall_op,feed_dict={sentence_vectors: x, label_vector: y,seq_lengths:seq})
 
         if iter %10==0:
-            acc=sess.run(accuracy,feed_dict={sentence_vectors: x, label_vector: y,seq_lengths:seq})
+
+            acc=sess.run(f1_score,feed_dict={sentence_vectors: x, label_vector: y,seq_lengths:seq})
             los=sess.run(loss,feed_dict={sentence_vectors: x, label_vector: y,seq_lengths:seq})
             print("For iter ",iter)
-            print("Accuracy ",acc)
+            print("F1 score ",acc)
             print("Loss ",los)
             print("__________________")
 
         iter=iter+1
 
 
+    dev_batch_number=0
+    accu=[]
+    for i in range(30):
 
+        dev_vec, dev_labels, dev_seq_length,dev_batch_number =next_batch(dev_batch_number,batch_size,"dev")
+
+        accu.append(sess.run(accuracy,feed_dict={sentence_vectors: dev_vec, label_vector: dev_labels,seq_lengths:dev_seq_length}))
+        print(accu)
+    print(np.mean(accu))
 
 

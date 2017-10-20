@@ -66,6 +66,9 @@ loss=tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=logits,labels
 #optimization
 opt=tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(loss)
 
+
+prediction=tf.argmax(logits,1)
+label=tf.argmax(tweet_label,1)
 #model evaluation
 correct_prediction=tf.equal(tf.argmax(logits,1),tf.argmax(tweet_label,1))
 accuracy=tf.reduce_mean(tf.cast(correct_prediction,tf.float32))
@@ -80,6 +83,9 @@ with tf.Session() as sess:
     while iter<500:
         x,y,seq,batch_number=next_batch(batch_number,batch_size,"train")
         y=label_to_one_hot(y)
+        print(sess.run(prediction,feed_dict={tweet_vec: x, tweet_label: y,seq_length:seq}))
+        print(sess.run(label,feed_dict={tweet_vec: x, tweet_label: y,seq_length:seq}))
+
 
 
         sess.run(opt, feed_dict={tweet_vec: x, tweet_label: y,seq_length:seq})
