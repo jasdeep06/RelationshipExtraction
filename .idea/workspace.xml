@@ -2,12 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e9b0ff2-dcb1-4fc9-8a03-ea0fd811f134" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataset/one_hot_labels.p" afterPath="$PROJECT_DIR$/dataset/one_hot_labels.p" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataset/padded_train_vectors.p" afterPath="$PROJECT_DIR$/dataset/padded_train_vectors.p" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tensorboard_analysis/1/events.out.tfevents.1508571301.CONSTALYTICSs-MacBook-Pro-3.local" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tensorboard_analysis/1/events.out.tfevents.1508576327.CONSTALYTICSs-MacBook-Pro-3.local" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tensorboard_analysis/1/events.out.tfevents.1508576782.CONSTALYTICSs-MacBook-Pro-3.local" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tensorboard_analysis/1/events.out.tfevents.1508576966.CONSTALYTICSs-MacBook-Pro-3.local" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tensorboard_analysis/2/events.out.tfevents.1508577174.CONSTALYTICSs-MacBook-Pro-3.local" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tensorboard_analysis/3/events.out.tfevents.1508578829.CONSTALYTICSs-MacBook-Pro-3.local" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tensorboard_analysis/4/events.out.tfevents.1508582005.CONSTALYTICSs-MacBook-Pro-3.local" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tensorboard_analysis/experimental/events.out.tfevents.1508587049.CONSTALYTICSs-MacBook-Pro-3.local" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tensorboard_analysis/experimental/events.out.tfevents.1508587421.CONSTALYTICSs-MacBook-Pro-3.local" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tensorboard_analysis/experimental/events.out.tfevents.1508588179.CONSTALYTICSs-MacBook-Pro-3.local" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tensorboard_analysis/experimental/events.out.tfevents.1508588318.CONSTALYTICSs-MacBook-Pro-3.local" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tensorboard_analysis/experimental/events.out.tfevents.1508589918.CONSTALYTICSs-MacBook-Pro-3.local" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tensorboard_analysis/experimental/events.out.tfevents.1508590210.CONSTALYTICSs-MacBook-Pro-3.local" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tensorboard_analysis/experimental/events.out.tfevents.1508590269.CONSTALYTICSs-MacBook-Pro-3.local" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tensorboard_analysis/experimental/events.out.tfevents.1508590466.CONSTALYTICSs-MacBook-Pro-3.local" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tensorboard_analysis/from_github/events.out.tfevents.1508590549.CONSTALYTICSs-MacBook-Pro-3.local" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tensorboard_analysis/from_github/events.out.tfevents.1508590748.CONSTALYTICSs-MacBook-Pro-3.local" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tensorboard_analysis/from_github_1/events.out.tfevents.1508734542.CONSTALYTICSs-MacBook-Pro-3.local" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tensorboard_analysis/from_github_1_xavier/events.out.tfevents.1508735769.CONSTALYTICSs-MacBook-Pro-3.local" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tensorboard_analysis/trial/events.out.tfevents.1508739296.CONSTALYTICSs-MacBook-Pro-3.local" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tensorboard_analysis/trial/events.out.tfevents.1508739385.CONSTALYTICSs-MacBook-Pro-3.local" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tensorboard_analysis/trial/events.out.tfevents.1508740065.CONSTALYTICSs-MacBook-Pro-3.local" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tensorboard_analysis/trial/events.out.tfevents.1508740119.CONSTALYTICSs-MacBook-Pro-3.local" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tensorboard_analysis/trial/events.out.tfevents.1508741000.CONSTALYTICSs-MacBook-Pro-3.local" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tensorboard_analysis/trial/events.out.tfevents.1508741063.CONSTALYTICSs-MacBook-Pro-3.local" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tensorboard_analysis/trial/events.out.tfevents.1508741789.CONSTALYTICSs-MacBook-Pro-3.local" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tensorboard_analysis/zer_bias_xavier_weights/events.out.tfevents.1508582927.CONSTALYTICSs-MacBook-Pro-3.local" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tensorboard_analysis/zer_bias_xavier_weights_1/events.out.tfevents.1508584318.CONSTALYTICSs-MacBook-Pro-3.local" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tensorboard_analysis/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data_preprocessing.py" afterPath="$PROJECT_DIR$/data_preprocessing.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/getting_familiar/bidirectional_rnn/SentimentAnalysis/model.py" afterPath="$PROJECT_DIR$/getting_familiar/bidirectional_rnn/SentimentAnalysis/model.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/getting_familiar/bidirectional_rnn/SentimentAnalysis/process_data.py" afterPath="$PROJECT_DIR$/getting_familiar/bidirectional_rnn/SentimentAnalysis/process_data.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/attention_model.py" afterPath="$PROJECT_DIR$/attention_model.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model.py" afterPath="$PROJECT_DIR$/model.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trial.py" afterPath="$PROJECT_DIR$/trial.py" />
     </list>
@@ -20,12 +45,12 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/RelationshipExtraction$format_data.coverage" NAME="format_data Coverage Results" MODIFIED="1508482929149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/RelationshipExtraction$trial__1_.coverage" NAME="trial (1) Coverage Results" MODIFIED="1508505685405" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RelationshipExtraction$trial__1_.coverage" NAME="trial (1) Coverage Results" MODIFIED="1508566206529" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RelationshipExtraction$attention_model.coverage" NAME="attention_model Coverage Results" MODIFIED="1508412311580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RelationshipExtraction$bidirectional_mnist.coverage" NAME="bidirectional_mnist Coverage Results" MODIFIED="1507977540780" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/getting_familiar/bidirectional_rnn" />
     <SUITE FILE_PATH="coverage/RelationshipExtraction$trial.coverage" NAME="trial Coverage Results" MODIFIED="1508219443065" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/getting_familiar/bidirectional_rnn" />
     <SUITE FILE_PATH="coverage/RelationshipExtraction$process_data.coverage" NAME="process_data Coverage Results" MODIFIED="1508237794978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/getting_familiar/bidirectional_rnn/SentimentAnalysis" />
-    <SUITE FILE_PATH="coverage/RelationshipExtraction$model__1_.coverage" NAME="model (1) Coverage Results" MODIFIED="1508504542071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RelationshipExtraction$model__1_.coverage" NAME="model (1) Coverage Results" MODIFIED="1508741764214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RelationshipExtraction$Nosetests_in_test_py.coverage" NAME="Nosetests in test.py Coverage Results" MODIFIED="1507879287881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/getting_familiar/bidirectional_rnn" />
     <SUITE FILE_PATH="coverage/RelationshipExtraction$bidirectional_mnist__1_.coverage" NAME="bidirectional_mnist (1) Coverage Results" MODIFIED="1508234796161" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/getting_familiar/bidirectional_rnn/MNIST" />
     <SUITE FILE_PATH="coverage/RelationshipExtraction$model.coverage" NAME="model Coverage Results" MODIFIED="1508505170830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/getting_familiar/bidirectional_rnn/SentimentAnalysis" />
@@ -38,7 +63,7 @@
       <file leaf-file-name="data_preprocessing.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data_preprocessing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="41">
+            <state relative-caret-position="1125">
               <caret line="75" column="32" lean-forward="false" selection-start-line="75" selection-start-column="32" selection-end-line="75" selection-end-column="32" />
               <folding>
                 <element signature="e#1#14#0" expanded="true" />
@@ -57,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="model.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="model.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="82" column="25" lean-forward="true" selection-start-line="82" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+            <state relative-caret-position="-604">
+              <caret line="120" column="19" lean-forward="false" selection-start-line="120" selection-start-column="19" selection-end-line="120" selection-end-column="19" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -69,13 +94,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="trial.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="trial.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/trial.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+            <state relative-caret-position="-109">
+              <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="attention_model.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/attention_model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-259">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding>
+                <element signature="e#1#24#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -84,7 +121,7 @@
       <file leaf-file-name="model.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/getting_familiar/bidirectional_rnn/SentimentAnalysis/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
+            <state relative-caret-position="556">
               <caret line="86" column="86" lean-forward="false" selection-start-line="86" selection-start-column="86" selection-end-line="86" selection-end-column="86" />
               <folding />
             </state>
@@ -126,12 +163,12 @@
         <option value="$PROJECT_DIR$/getting_familiar/bidirectional_rnn/MNIST/bidirectional_mnist.py" />
         <option value="$PROJECT_DIR$/getting_familiar/bidirectional_rnn/SentimentAnalysis/utils.py" />
         <option value="$PROJECT_DIR$/format_data.py" />
-        <option value="$PROJECT_DIR$/attention_model.py" />
         <option value="$PROJECT_DIR$/getting_familiar/bidirectional_rnn/SentimentAnalysis/process_data.py" />
         <option value="$PROJECT_DIR$/data_preprocessing.py" />
-        <option value="$PROJECT_DIR$/model.py" />
         <option value="$PROJECT_DIR$/getting_familiar/bidirectional_rnn/SentimentAnalysis/model.py" />
         <option value="$PROJECT_DIR$/trial.py" />
+        <option value="$PROJECT_DIR$/attention_model.py" />
+        <option value="$PROJECT_DIR$/model.py" />
       </list>
     </option>
   </component>
@@ -172,6 +209,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="RelationshipExtraction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RelationshipExtraction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RelationshipExtraction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tensorboard_analysis" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -249,7 +300,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.trial (1)">
+  <component name="RunManager" selected="Python.model (1)">
     <configuration default="false" name="trial (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -497,9 +548,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.trial (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.model" />
-        <item index="2" class="java.lang.String" itemvalue="Python.model (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Python.model (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.trial (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Python.model" />
         <item index="3" class="java.lang.String" itemvalue="Python.data_preprocessing" />
         <item index="4" class="java.lang.String" itemvalue="Python.format_data" />
       </list>
@@ -528,7 +579,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1188" height="679" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33114755" sideWeight="0.503367" order="-1" side_tool="true" content_ui="tabs" />
@@ -640,26 +690,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/attention_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="82" column="24" lean-forward="true" selection-start-line="82" selection-start-column="24" selection-end-line="82" selection-end-column="24" />
-          <folding>
-            <element signature="e#1#24#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_preprocessing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
-          <caret line="75" column="32" lean-forward="false" selection-start-line="75" selection-start-column="32" selection-end-line="75" selection-end-column="32" />
-          <folding>
-            <element signature="e#1#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/format_data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1095">
@@ -668,30 +698,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="82" column="25" lean-forward="true" selection-start-line="82" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/getting_familiar/bidirectional_rnn/SentimentAnalysis/model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
+        <state relative-caret-position="556">
           <caret line="86" column="86" lean-forward="false" selection-start-line="86" selection-start-column="86" selection-end-line="86" selection-end-column="86" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/attention_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-259">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="e#1#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/trial.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+        <state relative-caret-position="-109">
+          <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_preprocessing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1125">
+          <caret line="75" column="32" lean-forward="false" selection-start-line="75" selection-start-column="32" selection-end-line="75" selection-end-column="32" />
+          <folding>
+            <element signature="e#1#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-604">
+          <caret line="120" column="19" lean-forward="false" selection-start-line="120" selection-start-column="19" selection-end-line="120" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
