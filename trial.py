@@ -1,3 +1,5 @@
+"""""
+
 import numpy as np
 import tensorflow as tf
 from tensorflow.python.framework import dtypes
@@ -32,3 +34,6 @@ print(sess.run(t_p))
 
 #sess.run(precision_op)
 #print(sess.run(precision))
+
+"""""
+

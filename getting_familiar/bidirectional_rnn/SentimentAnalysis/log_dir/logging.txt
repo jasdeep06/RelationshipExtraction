@@ -1,0 +1,13 @@
+max_length 45 vocab_size 20306 embedding_size 50 num_units 128 num_classes 3 learning rate 0.01 batch_size 16 iterations 20 num_epoch 0 has f1 score of 0.5575
+max_length 45 vocab_size 20306 embedding_size 50 num_units 128 num_classes 3 learning rate 0.01 batch_size 128 iterations 314 num_epoch 4 has f1 score of 0.7925
+max_length 45 vocab_size 20306 embedding_size 50 num_units 128 num_classes 3 learning rate 0.01 batch_size 64 iterations 626 num_epoch 4 has f1 score of 0.837
+max_length 45 vocab_size 20306 embedding_size 50 num_units 128 num_classes 3 learning rate 0.01 batch_size 32 iterations 1250 num_epoch 4 has f1 score of 0.8255
+max_length 45 vocab_size 20306 embedding_size 50 num_units 128 num_classes 3 learning rate 0.01 batch_size 16 iterations 2502 num_epoch 4 has f1 score of 0.8155
+max_length 45 vocab_size 20306 embedding_size 50 num_units 128 num_classes 3 learning rate 0.01 batch_size 128 iterations 20 num_epoch 0 has f1 score of 0.7945
+max_length 45 vocab_size 20306 embedding_size 50 num_units 128 num_classes 3 learning rate 0.01 batch_size 128 iterations 20 num_epoch 0 has f1 score of 0.7495
+max_length 45 vocab_size 20306 embedding_size 50 num_units 128 num_classes 3 learning rate 0.0001 batch_size 64 iterations 626 num_epoch 4 has f1 score of 0.8035
+max_length 45 vocab_size 20306 embedding_size 50 num_units 128 num_classes 3 learning rate 0.001 batch_size 64 iterations 626 num_epoch 4 has f1 score of 0.837
+max_length 45 vocab_size 20306 embedding_size 50 num_units 128 num_classes 3 learning rate 0.01 batch_size 64 iterations 626 num_epoch 4 has f1 score of 0.831
+max_length 45 vocab_size 20306 embedding_size 50 num_units 128 num_classes 3 learning rate 0.001 batch_size 64 iterations 1094 num_epoch 7 has f1 score of 0.8275
+max_length 45 vocab_size 20306 embedding_size 50 num_units 128 num_classes 3 learning rate 0.0001 batch_size 64 iterations 1094 num_epoch 7 has f1 score of 0.8255
+max_length 45 vocab_size 20306 embedding_size 50 num_units 128 num_classes 3 learning rate 0.0001 batch_size 64 iterations 2030 num_epoch 13 has f1 score of 0.7605

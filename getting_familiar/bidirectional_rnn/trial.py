@@ -113,7 +113,8 @@ print(next(0,2))
 #print(next(22,33))
         
 """""
-a=[1,2,3,4]
-for i in range(8-len(a)):
-    a.append(0)
-print(a)
+import pickle
+
+content=pickle.load(open("data/dev.p",'rb'))
+
+print(content)

@@ -118,7 +118,7 @@ with tf.Session() as sess:
     #sess.run(tf.local_variables_initializer())
     batch_number=0
     iter=1
-    while iter<1200:
+    while iter<1000:
         sess.run(running_vars_initializer_precision)
         sess.run(running_vars_initializer_recall)
         #sess.run(tf.local_variables_initializer())
@@ -129,6 +129,8 @@ with tf.Session() as sess:
         #print(sess.run(tf.shape(sess.run(forward_prop_M,feed_dict={sentence_vectors: x, label_vector: y, seq_lengths: seq}))))
         #print(sess.run(label_vector, feed_dict={sentence_vectors: x, label_vector: y, seq_lengths: seq}))
         #print(sess.run(logits, feed_dict={sentence_vectors: x, label_vector: y, seq_lengths: seq}))
+        #print(sess.run(one_hot_logits, feed_dict={sentence_vectors: x, label_vector: y, seq_lengths: seq}))
+
 
         #print(sess.run(prediction,feed_dict={sentence_vectors: x, label_vector: y,seq_lengths:seq}))
         #print(sess.run(labels,feed_dict={sentence_vectors: x, label_vector: y,seq_lengths:seq}))

@@ -1,0 +1,7 @@
+max_length 45 vocab_size 20306 embedding_size 50 num_units 128 num_classes 3 learning rate 0.01 batch_size 16 iterations 20 num_epoch 0
+max_length 45 vocab_size 20306 embedding_size 50 num_units 128 num_classes 3 learning rate 0.01 batch_size 128 iterations 314 num_epoch 4
+max_length 45 vocab_size 20306 embedding_size 50 num_units 128 num_classes 3 learning rate 0.01 batch_size 64 iterations 626 num_epoch 4
+max_length 45 vocab_size 20306 embedding_size 50 num_units 128 num_classes 3 learning rate 0.01 batch_size 32 iterations 1250 num_epoch 4
+max_length 45 vocab_size 20306 embedding_size 50 num_units 128 num_classes 3 learning rate 0.01 batch_size 16 iterations 2502 num_epoch 4
+max_length 45 vocab_size 20306 embedding_size 50 num_units 128 num_classes 3 learning rate 0.01 batch_size 128 iterations 20 num_epoch 0
+max_length 45 vocab_size 20306 embedding_size 50 num_units 128 num_classes 3 learning rate 0.01 batch_size 128 iterations 20 num_epoch 0

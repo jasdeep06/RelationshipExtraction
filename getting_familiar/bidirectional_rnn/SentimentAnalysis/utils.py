@@ -10,8 +10,9 @@ import pickle
 
 
 
-def next_batch(batch_number,batch_size,task):
+def next_batch(batch_number,batch_size,num_epochs,task):
     #if not enough examples left then start from begininng
+
     if task=="train":
         NUMBER_OF_TWEETS=10000
         tweets_and_labels, seq_lengths = pickle.load(open("data/train.p", 'rb'))
@@ -24,6 +25,7 @@ def next_batch(batch_number,batch_size,task):
 
     if NUMBER_OF_TWEETS-(batch_number*batch_size) <batch_size:
         batch_number=0
+        num_epochs=num_epochs+1
     #creating batches of tweet and label
     tweet_and_label_batch=tweets_and_labels[batch_number*batch_size:batch_number*batch_size+batch_size]
     #seperating tweet and label batches
@@ -31,7 +33,7 @@ def next_batch(batch_number,batch_size,task):
     #batch_increment
     seq_lengths_batch=seq_lengths[batch_number*batch_size:batch_number*batch_size+batch_size]
     batch_number=batch_number+1
-    return tweet_batch,label_batch,seq_lengths_batch,batch_number
+    return tweet_batch,label_batch,seq_lengths_batch,batch_number,num_epochs
 
 
 
@@ -56,7 +58,9 @@ def label_to_one_hot(label_batch):
         result.append(one_hot)
 
     return result
-
+def log_params(filename,log_string):
+    f=open(filename,'a')
+    f.write(log_string + "\n")
 
 """""
 for i in range(1):
